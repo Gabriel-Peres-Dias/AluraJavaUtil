@@ -9,7 +9,8 @@ public class Teste {
 
 	public static void main(String[] args) {
 
-		ArrayList lista = new ArrayList();
+		//Generics
+		ArrayList<Conta> lista = new ArrayList<Conta>();
 		
 		Conta cc1 = new ContaCorrente(11,11);
 		lista.add(cc1);
@@ -30,8 +31,8 @@ public class Teste {
 		
 		System.out.println("//------------------------------------------------------------//");
 		// Maneira mais simples de iterar um array
-		for(Object o : lista) {
-			System.out.println(o);
+		for(Conta conta : lista) {
+			System.out.println(conta);
 		}
 		
 	}
