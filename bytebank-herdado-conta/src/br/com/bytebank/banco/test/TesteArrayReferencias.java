@@ -16,7 +16,6 @@ public class TesteArrayReferencias {
 		ContaCorrente cc1 = new ContaCorrente(123,321);
 		
 		contas[0] = cc1;
-		
 		ContaPoupanca cc2 = new ContaPoupanca(321,123);
 		
 		contas[1] = cc2;
