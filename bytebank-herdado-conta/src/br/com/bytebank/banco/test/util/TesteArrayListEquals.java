@@ -5,10 +5,17 @@ import java.util.ArrayList;
 import br.com.bytebank.banco.modelo.Conta;
 import br.com.bytebank.banco.modelo.ContaCorrente;
 
-public class Teste {
+public class TesteArrayListEquals {
 
 	public static void main(String[] args) {
-
+		
+		
+//		Conta cc1 = new ContaCorrente(11,11);
+//		Conta cc2 = new ContaCorrente(11,11);
+//		
+//		boolean igual = cc1.ehIgual(cc2);
+//		System.out.println(igual);
+		
 		//Generics
 		ArrayList<Conta> lista = new ArrayList<Conta>();
 		
@@ -18,19 +25,13 @@ public class Teste {
 		Conta cc2 = new ContaCorrente(22,22);
 		lista.add(cc2);
 		
-		Conta cc3 = new ContaCorrente(33,33);
-		lista.add(cc3);
+		Conta cc3 = new ContaCorrente(22,22);
 		
-		Conta cc4 = new ContaCorrente(44,44);
-		lista.add(cc4);
 		
-		// Maneira mais antiga de iterar um array
-		for(int i = 0; i < lista.size(); i++) {
-			System.out.println(lista.get(i));
-		}
+		boolean existe = lista.contains(cc3);
+		System.out.println("Já existe? " + existe);
 		
-		System.out.println("//------------------------------------------------------------//");
-		// Maneira mais simples de iterar um array
+		
 		for(Conta conta : lista) {
 			System.out.println(conta);
 		}
